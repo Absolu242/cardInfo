@@ -1,0 +1,193 @@
+$primaryColor: #2e384d;
+$secondaryColor: #b2bccb;
+$iconBlueBack: #d6dfff;
+$iconBlueColor: #5378ff;
+$iconGreenBack: #d7efd6;
+$iconGreenColor: #5ebd5a;
+$line: #b6ddf0e1;
+$blueHover: #2e5bff;
+p {
+    color: $secondaryColor;
+}
+
+span {
+    color: $primaryColor;
+}
+
+.card {
+    background-color: #fff;
+    max-width: 600px;
+    &__content {
+        padding: 2rem 3rem;
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span {
+            p {
+                font-size: 1.3rem;
+            }
+        }
+        .switch {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.4rem;
+            &-btn {
+                padding-left: 1rem;
+                cursor: pointer;
+            }
+        }
+    }
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding-top: 2rem;
+        &--left {
+            .name {
+                display: flex;
+                align-items: center;
+                padding: 1rem 0;
+                img {
+                    width: 50px;
+                    border-radius: 50%;
+                }
+                span {
+                    padding: 0 1rem;
+                    p {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+        &--userInfo {
+            padding: 0.5rem 0;
+            p {
+                font-size: 1.2rem;
+            }
+            span {
+                font-size: 1.2rem;
+                padding: 0.8rem 0;
+                font-weight: 600;
+            }
+        }
+        &--right {
+            position: relative;
+            top: 1.8rem;
+            left: -1.8rem;
+            display: grid;
+            max-width: 200px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            grid-template-rows: 60px;
+            .pay {
+                width: fit-content;
+                height: fit-content;
+                svg {
+                    border: 1px solid $secondaryColor;
+                    border-radius: 5px;
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+                    &:hover {
+                        .bkg {
+                            fill: $blueHover;
+                        }
+                        .fontColor {
+                            fill: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__bottom {
+        max-width: 350px;
+        margin: 0 auto;
+        height: 250px;
+        &--traget {
+            position: relative;
+            display: flex;
+            margin: 4rem 0;
+            justify-content: space-between;
+            span {
+                .icon {
+                    padding: 0.8rem 1.2rem;
+                    border-radius: 50%;
+                    font-size: 1.3rem;
+                    &.greenIcon {
+                        background-color: $iconGreenBack;
+                        color: $iconGreenColor;
+                    }
+                    &.blueIcon {
+                        background-color: $iconBlueBack;
+                        color: $iconBlueColor;
+                    }
+                }
+                h2 {
+                    padding-top: 0.8rem;
+                }
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+            .line {
+                position: absolute;
+                top: 1rem;
+                left: 5rem;
+                width: 50%;
+                height: 1px;
+                background-color: $line;
+            }
+        }
+        &--details {
+            display: flex;
+            justify-content: space-between;
+        }
+        &--detail {
+            span {
+                font-size: 1.3rem;
+                font-weight: 600;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 765px) {
+    .card {
+        &__content {
+            padding: 2rem;
+        }
+        &__main {
+            flex-direction: column;
+            //align-items: center;
+            &--right {
+                left: 0;
+            }
+        }
+        &__bottom {
+            padding-top: 2rem;
+            &--traget {
+                .line {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (width: 540px) {
+    .card {
+        &__main {
+            flex-direction: row;
+            //align-items: center;
+            &--right {
+                left: -1.8rem;
+            }
+        }
+    }
+}

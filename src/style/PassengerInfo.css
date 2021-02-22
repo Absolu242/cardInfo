@@ -1,0 +1,237 @@
+p {
+  color: #b2bccb;
+}
+
+span {
+  color: #2e384d;
+}
+
+.card {
+  background-color: #fff;
+  max-width: 600px;
+}
+
+.card__content {
+  padding: 2rem 3rem;
+}
+
+.card__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__top span p {
+  font-size: 1.3rem;
+}
+
+.card__top .switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.card__top .switch-btn {
+  padding-left: 1rem;
+  cursor: pointer;
+}
+
+.card__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  padding-top: 2rem;
+}
+
+.card__main--left .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0;
+}
+
+.card__main--left .name img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.card__main--left .name span {
+  padding: 0 1rem;
+}
+
+.card__main--left .name span p {
+  font-size: 1.3rem;
+}
+
+.card__main--userInfo {
+  padding: 0.5rem 0;
+}
+
+.card__main--userInfo p {
+  font-size: 1.2rem;
+}
+
+.card__main--userInfo span {
+  font-size: 1.2rem;
+  padding: 0.8rem 0;
+  font-weight: 600;
+}
+
+.card__main--right {
+  position: relative;
+  top: 1.8rem;
+  left: -1.8rem;
+  display: -ms-grid;
+  display: grid;
+  max-width: 200px;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  -ms-grid-rows: 60px;
+      grid-template-rows: 60px;
+}
+
+.card__main--right .pay {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.card__main--right .pay svg {
+  border: 1px solid #b2bccb;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card__main--right .pay svg:hover .bkg {
+  fill: #2e5bff;
+}
+
+.card__main--right .pay svg:hover .fontColor {
+  fill: white;
+}
+
+.card__bottom {
+  max-width: 350px;
+  margin: 0 auto;
+  height: 250px;
+}
+
+.card__bottom--traget {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 4rem 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card__bottom--traget span .icon {
+  padding: 0.8rem 1.2rem;
+  border-radius: 50%;
+  font-size: 1.3rem;
+}
+
+.card__bottom--traget span .icon.greenIcon {
+  background-color: #d7efd6;
+  color: #5ebd5a;
+}
+
+.card__bottom--traget span .icon.blueIcon {
+  background-color: #d6dfff;
+  color: #5378ff;
+}
+
+.card__bottom--traget span h2 {
+  padding-top: 0.8rem;
+}
+
+.card__bottom--traget span p {
+  font-size: 1.2rem;
+}
+
+.card__bottom--traget .line {
+  position: absolute;
+  top: 1rem;
+  left: 5rem;
+  width: 50%;
+  height: 1px;
+  background-color: #b6ddf0e1;
+}
+
+.card__bottom--details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card__bottom--detail span {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.card__bottom--detail p {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 765px) {
+  .card__content {
+    padding: 2rem;
+  }
+  .card__main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card__main--right {
+    left: 0;
+  }
+  .card__bottom {
+    padding-top: 2rem;
+  }
+  .card__bottom--traget .line {
+    display: none;
+  }
+}
+
+@media (width: 540px) {
+  .card__main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .card__main--right {
+    left: -1.8rem;
+  }
+}
+/*# sourceMappingURL=PassengerInfo.css.map */
